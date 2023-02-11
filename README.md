@@ -34,3 +34,17 @@ The project architecture is quite simple where we have :
 </p>
 
 The communication between the Frontend and the Backend is based on REST API requests and Web Socket for the realtime communication in users conversations.
+
+
+## Application current state
+This application is working for only one conversation, still need to manage the keys for many conversations and test other features.
+Also needs code refactoring (It's a mess in some modules)
+
+
+Hopefully will get back to it soon 😁
+
+## How to run it
+- Make sure that you have Angular, Nest JS and docker available
+- install the dependencies for the frontend and backend using `npm i`
+- run the redis DB using `make redis_up` and the backend `npm run start:dev` in the backend project
+- run the frontend using `ng serve --open` in the frontend project
