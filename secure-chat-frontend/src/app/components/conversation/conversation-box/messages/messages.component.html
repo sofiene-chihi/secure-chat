@@ -1,0 +1,7 @@
+<div class="messages-box">
+  <app-message-item
+    *ngFor="let message of messages"
+    [messageText]="message.content"
+    [messageType]="message.type"
+  ></app-message-item>
+</div>

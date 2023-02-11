@@ -1,0 +1,19 @@
+<div class="modal-container">
+  <h3 mat-dialog-title>Sure you want to quit this conversation?</h3>
+  <div mat-dialog-content>
+    <p>This act will delete all the history of this conversation</p>
+  </div>
+  <div
+    mat-dialog-actions
+    [ngClass]="
+      !mobileStyling
+        ? 'mat-dialog-actions-desktop'
+        : 'mat-dialog-actions-mobile'
+    "
+  >
+    <button mat-button (click)="decline()">Decline</button>
+    <button mat-button (click)="accept()" class="quit-btn">
+      Accept <img src="../../../../assets/svgs/tick.svg" alt="tick icon" />
+    </button>
+  </div>
+</div>

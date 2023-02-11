@@ -1,0 +1,79 @@
+.id-generator-container {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.example-form {
+  width: 100%;
+}
+
+.example-full-width {
+  border-radius: 8px;
+  width: 20%;
+}
+
+.example-full-width-mobile {
+  border-radius: 8px;
+  width: 50%;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  background-color: #ffc522;
+  color: white;
+}
+
+.resultId {
+  margin-top: 2rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.id-card {
+  width: 50%;
+  margin: auto;
+  cursor: pointer;
+}
+
+.id-card-mobile {
+  width: 80%;
+  margin: auto;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.id-btns {
+  width: 40%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.id-btns-mobile {
+  width: 100%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.share-btn {
+  background-color: #ffc522;
+}
+
+.invite-btn {
+  background-color: #68182b;
+  color: white;
+}
+
+.share-icon {
+  width: 16px;
+}
+
+.invite-icon {
+  width: 22px;
+  color: white;
+}

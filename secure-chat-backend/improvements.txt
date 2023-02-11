@@ -1,0 +1,4 @@
+remove conversatoin and messages : 
+	 when quit conversation / close conversation tab / 
+create dockerfile for the frontend and backend
+create docker-compose for the backend

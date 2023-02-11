@@ -1,0 +1,27 @@
+.example-container {
+    height: 100vh;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: #FFFAF0;
+  }
+  
+  
+  .example-sidenav {
+    max-width: 20%;
+    min-width: 15%;
+    background-color: #FFFAF0;
+  }
+
+  .toggleSidebarButton{
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    color: #FFFAF0;
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .example-sidenav {
+      min-width: 40%;
+      background-color: #FFFAF0;
+    }
+  }

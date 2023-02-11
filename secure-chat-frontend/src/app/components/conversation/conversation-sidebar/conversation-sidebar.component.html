@@ -1,0 +1,8 @@
+<ng-scrollbar #scrollable class="scrollbar" [disabled]="false">
+  <div class="container" *ngFor="let profileName of conversationList">
+    <app-side-profile [profileName]="profileName" (click)="openConversation(profileName)" ></app-side-profile>
+  </div>
+  <div class="container">
+    <app-add-profile (click)="openAddConversation()"></app-add-profile>
+  </div>
+</ng-scrollbar>

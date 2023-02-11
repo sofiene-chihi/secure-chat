@@ -1,0 +1,19 @@
+<div class="modal-container">
+  <h3 mat-dialog-title>Chat Request from {{ data.sender }} !</h3>
+  <div mat-dialog-content>
+    <p>Do you want to start a chat conversation with {{ data.sender }}</p>
+  </div>
+  <div
+    mat-dialog-actions
+    [ngClass]="
+      !mobileStyling
+        ? 'mat-dialog-actions-desktop'
+        : 'mat-dialog-actions-mobile'
+    "
+  >
+    <button mat-button (click)="declineRequest()">Decline</button>
+    <button mat-button (click)="acceptRequest()" class="invite-btn">
+      Accept <img src="../../../../assets/svgs/tick.svg" alt="tick icon" />
+    </button>
+  </div>
+</div>

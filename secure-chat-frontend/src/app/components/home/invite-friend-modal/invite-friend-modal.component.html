@@ -1,0 +1,49 @@
+<div class="modal-container">
+  <h1 mat-dialog-title>Hi {{ data.name }}</h1>
+  <div mat-dialog-content>
+    <p>Type the Id of the person you want to chat with</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Person ID</mat-label>
+      <input matInput [(ngModel)]="guestId" />
+    </mat-form-field>
+  </div>
+  <div
+    *ngIf="!chatIssue; else errorBlock"
+    mat-dialog-actions
+    [ngClass]="
+      !mobileStyling
+        ? 'mat-dialog-actions-desktop'
+        : 'mat-dialog-actions-mobile'
+    "
+  >
+    <button mat-button (click)="cancelInviation()">Cancel</button>
+    <button
+      mat-button
+      (click)="sendInvitation()"
+      *ngIf="!requestSent; else spinnerBlock"
+      class="invite-btn"
+    >
+      <p class="sendMsg">
+        Send
+        <img
+          src="../../../../assets/images/send-request.png"
+          alt="send request image"
+        />
+      </p>
+    </button>
+  </div>
+</div>
+<ng-template #spinnerBlock>
+  <mat-progress-spinner
+    class="spinner"
+    [mode]="spinnerMode"
+    [value]="spinnerValue"
+    *ngIf="spinnerActive"
+    diameter="30"
+  >
+  </mat-progress-spinner>
+</ng-template>
+
+<ng-template #errorBlock>
+  <h3 class="declinedRequestMsg">{{ errorMessage }} 😓</h3>
+</ng-template>

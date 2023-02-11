@@ -1,0 +1,15 @@
+<mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile>
+        <img src="./../../../../assets/images/chat.png" alt="chat icon" class="chatImage">
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <h1 *ngIf="!mobileScreen" class="headerTitle"> Welcome to secure chat </h1>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <img src="./../../../../assets/images/chat.png" alt="chat icon" class="chatImage">
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <div style="text-align: center;">
+    <h1 *ngIf="mobileScreen" class="headerTitle" > Welcome to Secure Chat </h1>
+  </div>

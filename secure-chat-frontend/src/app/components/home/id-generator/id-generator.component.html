@@ -1,0 +1,48 @@
+<div class="id-generator-container container">
+    <h3 class="title">NOTE: the name you'll put can be any random name that you'll use during the Chat</h3>
+    <form class="example-form">
+        <mat-form-field
+        [ngClass]="!mobileStyling ? 'example-full-width' : 'example-full-width-mobile'"
+        appearance="fill">
+          <mat-label>Name</mat-label>
+          <input type="text" matInput [formControl]="nameFormControl" (keyup)="submitEvent($event)"  placeholder="Ex. Hanah">
+          <mat-error *ngIf="nameFormControl.hasError('minlength') && !nameFormControl.hasError('required')">
+            Please enter a name with at least 4 characters
+          </mat-error>
+          <mat-error *ngIf="nameFormControl.hasError('maxlength') && !nameFormControl.hasError('required')">
+            Please enter a name with a maximum of 12 characters
+          </mat-error>
+          <mat-error *ngIf="nameFormControl.hasError('required')">
+            Name is <s trong>required</s>
+          </mat-error>
+        </mat-form-field>
+        <br>
+        <button mat-button class="submit-btn" [disabled]="!nameFormControl.valid || submittedName" (click)="submitName()">Submit Username</button>
+      </form>
+
+      <div *ngIf="submittedName" class="resultId">
+            here is your ID <br><br> 
+        <mat-card mat-raised-button #tooltip="matTooltip"
+        matTooltip= {{copyIdMessage}}
+        [matTooltipPosition]="'below'"
+        matTooltipHideDelay="1000"
+        aria-label="card that displays the user generated Id"
+        [ngClass]="!mobileStyling ? 'id-card' : 'id-card-mobile'"
+        (click)="copyId()"
+        id="result-id"
+        >{{generatedId}}</mat-card>
+
+        <mat-grid-list cols="2" rowHeight="{{rowHeightNumber}}:1" 
+        [ngClass]="!mobileStyling ? 'id-btns' : 'id-btns-mobile'"
+        >
+          <mat-grid-tile class="btn-container">
+
+            <button mat-button class="share-btn" (click)="shareId()">Share ID   <img src="../../../../assets/svgs/share-icon.svg" alt="share icon" class="share-icon"></button>
+
+          </mat-grid-tile>
+          <mat-grid-tile class="btn-container">
+            <button mat-button class="invite-btn" (click)="inviteById()">Invite a friend <img src="../../../../assets/images/invite-icon.png" alt="invite friend icon" class="invite-icon" ></button>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+</div>

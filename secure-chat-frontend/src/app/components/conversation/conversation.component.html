@@ -1,0 +1,30 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer
+    #drawer
+    opened
+    class="example-sidenav"
+    [mode]="mobileDevice ? 'over' : 'side'"
+  >
+    <app-conversation-sidebar [userProfile]="updatedProfileName" (profileNameEvent)="updateConversation($event)">
+    </app-conversation-sidebar>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button
+      type="button"
+      class="toggleSidebarButton"
+      id="toggleButton"
+      mat-button
+      (click)="drawer.toggle()"
+      *ngIf="mobileDevice"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <app-conversation-box
+      [newProfileName]="updatedProfileName"
+      [conversationMessages]="conversationMessages"
+      [remainingTime]="conversationTTL"
+      [encryptionKey]="derivedCryptoKey"
+    ></app-conversation-box>
+  </div>
+</mat-drawer-container>

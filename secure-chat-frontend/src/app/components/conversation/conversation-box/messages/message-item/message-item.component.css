@@ -1,0 +1,20 @@
+.message-container {
+  background-color: #68182b;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  padding: 1px;
+  border-radius: 8px;
+  display: inline-block;
+  position: relative;
+}
+
+.messageText {
+  color: white;
+  margin: 4px;
+  font-weight: 500;
+}
+
+.recievedMessage {
+  position: absolute;
+  right: 1rem;
+}

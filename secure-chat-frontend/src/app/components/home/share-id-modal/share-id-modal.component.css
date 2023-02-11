@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+}
+
+.mat-grid-list{
+    width: 80%;
+    margin: auto;
+}
+
+img{
+    cursor: pointer;
+}

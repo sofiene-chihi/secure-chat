@@ -1,0 +1,43 @@
+.modal-container {
+  text-align: center;
+}
+
+.mat-dialog-actions-desktop {
+  margin-left: auto;
+  width: 50%;
+}
+
+.mat-dialog-actions-mobile {
+  margin-left: auto;
+  width: 80%;
+}
+
+.invite-btn {
+  background-color: #ffc522;
+}
+
+.mat-form-field {
+  width: 70%;
+}
+
+img {
+  width: 16px;
+}
+
+:host ::ng-deep .mat-progress-spinner circle,
+.mat-spinner circle {
+  stroke: #68182b;
+}
+
+.spinner{
+    margin: auto;
+}
+
+.sendMsg{
+    display: inline-block;
+    margin: 0px;
+}
+
+.declinedRequestMsg{
+    color: #68182b;
+}

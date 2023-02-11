@@ -1,0 +1,5 @@
+when generating id : save in redis user_id:socket_client_id
+when inviting someone : sending msg to start chat to other
+when accepting the chat => create a new room for the 2 connections
+when sending a message => send the message in the room
+when disconnecting => delete from redis database and the room

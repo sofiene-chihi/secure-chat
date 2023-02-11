@@ -1,0 +1,21 @@
+.modal-container {
+  text-align: center;
+}
+
+.mat-dialog-actions-desktop {
+  margin-left: auto;
+  width: 50%;
+}
+
+.mat-dialog-actions-mobile {
+  margin-left: auto;
+  width: 80%;
+}
+
+.quit-btn {
+  background-color: #ffc522;
+}
+
+img {
+  width: 16px;
+}
