@@ -1,7 +1,7 @@
 # Secure Chat
 
 What different from the other Chat application?
-Not many chat applications really provide data security and privacy. The conversations are processed by big data engines and the users data is used for advertisement and even selled to other companies.
+Not many chat applications really provide data security and privacy. The conversations are processed by big data engines and the users data is used for advertisement and even sold to other companies.
 
 ### Privacy and Data security
 
@@ -13,11 +13,11 @@ The 2 major parts that secure chat is based on are :
 
 Data security through the **End to End Encryption** and the fact that each conversation is completely deleted after its end (a limit of 2h for each conversation).
 
-Users privacy is garanteed since each user doesn't need to provide any informations, just a name and a random ID will be generated for that user.
+Users privacy is guaranteed since each user doesn't need to provide any information, just a name and a random ID will be generated for that user.
 
 ### Performance
 
-The stateless nature of the application doesn't just garantee the conversation privacy and security. In fact the conversations and users data are stored in an in-memory database ( Redis DB ) that provides a very high performance in retrieving and storing data.
+The stateless nature of the application doesn't just guarantee the conversation privacy and security. In fact the conversations and users data are stored in an in-memory database ( Redis DB ) that provides a very high performance in retrieving and storing data.
 
 ## Architecture
 
